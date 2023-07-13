@@ -6,7 +6,7 @@ import {
   getError,
   getFilterValue,
   getIsLoading,
-} from 'redux/selectors';
+} from 'redux/contacts/selectors';
 import { Loader } from 'components/Loader/Loader';
 import { ErrorMessage } from 'components/ErrorMessage/ErrorMessage';
 
@@ -27,13 +27,19 @@ export const Contacts = () => {
     <>
       {isLoading && <Loader />}
       {Error && <ErrorMessage children={Error} />}
-      {!isLoading && !Error && (
-        <ContactsList>
-          {filteredСontacts.map(contact => {
-            return <ContactItem contact={contact} key={contact.id} />;
-          })}
-        </ContactsList>
-      )}
+      {!isLoading &&
+        !Error &&
+        (filteredСontacts.length !== 0 ? (
+          <ContactsList>
+            {filteredСontacts.map(contact => {
+              return <ContactItem contact={contact} key={contact.id} />;
+            })}
+          </ContactsList>
+        ) : filterValue.length !== 0 ? (
+          <p>There is no name with the name {filterValue}</p>
+        ) : (
+          <p>There are no contacts yet!</p>
+        ))}
     </>
   );
 };

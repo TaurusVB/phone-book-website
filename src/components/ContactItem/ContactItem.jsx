@@ -1,6 +1,6 @@
 import { ContactLiItem, ContactText, DeleteBtn } from './ContactItem.styled';
 import { useDispatch } from 'react-redux';
-import { deleteContact } from '../../redux/operationsAPI';
+import { deleteContact } from '../../redux/contacts/operations';
 import PropTypes from 'prop-types';
 
 export const ContactItem = ({ contact }) => {
