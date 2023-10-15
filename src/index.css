@@ -14,7 +14,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 
   background-color: #5ea4ed;
-  background-image: url('https://bit.ly/44VaKoy');
+  background-image: url('/assets/background.jpg');
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
