@@ -1,7 +1,7 @@
-import RegistrationForm from 'components/RegistrationForm/RegistrationForm';
+import CustomForm from 'components/CustomForm/CustomForm';
 
 const RegistrationPage = () => {
-  return <RegistrationForm />;
+  return <CustomForm type="LogUp" />;
 };
 
 export default RegistrationPage;

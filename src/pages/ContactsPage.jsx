@@ -21,8 +21,6 @@ const ContactsPage = () => {
 
   return (
     <ContainerForm>
-      {' '}
-      <MainTitle>PhoneBook</MainTitle>
       <ContactForm />
       <ContactsTitle>Contacts</ContactsTitle>
       <Filter />

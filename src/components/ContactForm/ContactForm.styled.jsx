@@ -1,9 +1,15 @@
 import styled from '@emotion/styled';
 
 export const Form = styled.form`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   border-radius: 5px;
-  background-color: #f2f2f2;
+  background-color: inherit;
   padding: 20px;
+  backdrop-filter: blur(15px);
+  border: 2px solid #5ea4ed;
 `;
 
 export const Label = styled.label`
