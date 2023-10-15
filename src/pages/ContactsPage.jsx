@@ -4,11 +4,7 @@ import { Filter } from 'components/Filter/Filter';
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { fetchContacts } from 'redux/contacts/operations';
-import {
-  ContactsTitle,
-  ContainerForm,
-  MainTitle,
-} from 'ui/ContactsPage.styled';
+import { ContactsTitle, ContainerForm } from 'ui/ContactsPage.styled';
 
 const ContactsPage = () => {
   const dispatch = useDispatch();
