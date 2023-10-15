@@ -18,6 +18,13 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
+
+  transition: all 0.3s;
+}
+
+ul,
+ol {
+  list-style: none;
 }
 
 code {

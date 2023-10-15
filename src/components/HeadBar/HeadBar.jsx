@@ -10,18 +10,18 @@ const HeadBar = () => {
   const { isLoggedIn } = useAuth();
 
   return (
-    <AppBar position='static'>
+    <AppBar position="static">
       <Container maxWidth="xl">
         <Toolbar disableGutters sx={{ flexGrow: 1 }}>
           <Navigation>
             <Link to="/">
-              <Typography variant="h6" component="p">
+              <Typography variant="h3" component="p">
                 PhoneBook
               </Typography>
-              <MenuBookTwoToneIcon />
+              <MenuBookTwoToneIcon sx={{ fontSize: '56px', ml: '20px' }} />
             </Link>
+            <div>{isLoggedIn ? <UserMenu /> : <AuthNav />}</div>
           </Navigation>
-          {isLoggedIn ? <UserMenu /> : <AuthNav />}
         </Toolbar>
       </Container>
     </AppBar>
