@@ -1,12 +1,5 @@
-import { useAuth } from 'hooks';
-import { CustomNav, Link } from './Navigation.styled';
-export const Navigation = ({ children }) => {
-  const { isLoggedIn } = useAuth();
+import { CustomNav } from './Navigation.styled';
 
-  return (
-    <CustomNav>
-      {children}
-      {isLoggedIn && <Link to="/contacts">Tasks</Link>}
-    </CustomNav>
-  );
+export const Navigation = ({ children }) => {
+  return <CustomNav>{children}</CustomNav>;
 };

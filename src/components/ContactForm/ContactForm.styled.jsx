@@ -4,6 +4,8 @@ export const Form = styled.form`
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+  width: 270px;
 
   border-radius: 5px;
   background-color: inherit;

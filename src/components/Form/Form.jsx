@@ -1,8 +1,8 @@
 import { FormWrapper } from './Form.styled';
 
-const Form = ({ children, autoComplete, onSubmit }) => {
+const Form = ({ children, autoComplete, onSubmit, style }) => {
   return (
-    <FormWrapper onSubmit={onSubmit} autoComplete={autoComplete}>
+    <FormWrapper onSubmit={onSubmit} autoComplete={autoComplete} style={style}>
       {children}
     </FormWrapper>
   );

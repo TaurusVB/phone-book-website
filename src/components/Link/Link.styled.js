@@ -13,9 +13,13 @@ export const NaLink = styled(NavLink)`
   color: #fff;
   transition: all 0.3s;
 
-  &:active,
   &:hover {
     color: ${colors.gray};
     scale: 1.1;
+  }
+
+  &.active {
+    color: ${colors.gray};
+    text-decoration: underline;
   }
 `;

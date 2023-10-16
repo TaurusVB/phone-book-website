@@ -6,7 +6,7 @@ export const Label = styled.label`
   left: 5px;
   transform: translateY(-50%);
   color: #fff;
-  font-size: 1em;
+  font-size: 15px;
   pointer-events: none;
   transition: 0.5s;
 `;

@@ -1,9 +1,13 @@
 import { nanoid } from 'nanoid';
-import { Form, Label, Input, Button } from './ContactForm.styled';
+import { Label, Input, Button } from './ContactForm.styled';
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { addContact } from '../../redux/contacts/operations';
 import { getContacts } from 'redux/contacts/selectors';
+import { TextField } from '@mui/material';
+import Form from 'components/Form/Form';
+import InputBox from 'components/InputBox/InputBox';
+import CustomButton from 'components/CustomButton/CustomButton';
 
 export const ContactForm = () => {
   const contacts = useSelector(getContacts);
@@ -52,30 +56,35 @@ export const ContactForm = () => {
   };
 
   return (
-    <Form onSubmit={handleSubmit}>
-      <Label htmlFor={nameId}>Name</Label>
-      <Input
-        name="name"
-        type="text"
-        id={nameId}
-        value={name}
-        onChange={handleChange}
-        pattern="[A-Za-z0-9]+"
-        title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
-        required
-      />
-      <Label htmlFor={numberId}>Number</Label>
-      <Input
-        name="number"
-        type="tel"
-        id={numberId}
-        value={number}
-        onChange={handleChange}
-        pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
-        title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
-        required
-      />
-      <Button type="submit">Add contact</Button>
+    <Form
+      onSubmit={handleSubmit}
+      autoComplete={'off'}
+      style={{ height: '350px' }}
+    >
+      <div>
+        <InputBox
+          name="name"
+          typeInput="text"
+          labelName="Name"
+          forAndId={nameId}
+          value={name}
+          onChange={handleChange}
+          pattern="[A-Za-z0-9]+"
+          title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
+        />
+        <InputBox
+          name="number"
+          typeInput="text"
+          labelName="Number"
+          forAndId={nameId}
+          value={number}
+          onChange={handleChange}
+          pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
+          title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
+        />
+
+        <CustomButton text={'Add contact'} />
+      </div>
     </Form>
   );
 };
