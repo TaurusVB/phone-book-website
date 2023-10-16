@@ -1,4 +1,5 @@
 import styled from '@emotion/styled';
+import colors from 'utils/colorVaribals';
 
 export const Input = styled.input`
   width: 100%;
@@ -8,7 +9,8 @@ export const Input = styled.input`
   outline: none;
   font-size: 1em;
   padding: 0 35px 0 5px;
-  color: #fff;
+  font-weight: 600;
+  color: #222e3b;
 
   &:focus ~ label,
   &:valid ~ label {
