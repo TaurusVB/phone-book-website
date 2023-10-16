@@ -7,7 +7,7 @@ import {
   getFilterValue,
   getIsLoading,
 } from 'redux/contacts/selectors';
-import { Loader } from 'components/Loader/Loader';
+import Loader from 'components/Loader/Loader';
 import { ErrorMessage } from 'components/ErrorMessage/ErrorMessage';
 
 export const Contacts = () => {

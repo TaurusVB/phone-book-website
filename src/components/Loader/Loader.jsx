@@ -1,16 +1,26 @@
-import { RotatingLines } from 'react-loader-spinner';
+import { LoaderContainer } from './Loader.styled';
 
-export const Loader = () => {
+import { Puff } from 'react-loader-spinner';
+
+const Loader = () => {
   return (
-    <div style={{ display: 'flex' }}>
-      <RotatingLines
-        strokeColor="grey"
-        strokeWidth="5"
-        animationDuration="0.75"
-        width="96"
+    <LoaderContainer>
+      <Puff
+        height={'100'}
+        width={'100'}
+        radius={1}
+        color="#3470FF"
+        ariaLabel="puff-loading"
+        wrapperStyle={{
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+        }}
+        wrapperClass=""
         visible={true}
       />
-      <p>making a request to the server...</p>
-    </div>
+    </LoaderContainer>
   );
 };
+
+export default Loader;

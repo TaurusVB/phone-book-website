@@ -1,22 +1,27 @@
 import styled from '@emotion/styled';
+import colors from 'utils/colorVaribals';
 
 export const Container = styled.div`
-  display: flex;
+  padding: 30px 20px;
+
+  background: transparent;
+  border: 2px solid rgba(94, 164, 237, 0.5);
+  border-radius: 20px;
+  backdrop-filter: blur(15px);
 `;
 
 export const Wrapper = styled.div`
-  margin-bottom: 40px;
+  margin-top: 15px;
 `;
 
 export const MainTitle = styled.p`
-  margin-left: 50px;
   font-size: 2em;
   color: #fff;
 `;
 
 export const List = styled.ul`
+  padding: 15px;
   color: #fff;
-  margin: 10px 0 0 85px;
 `;
 
 export const ListItem = styled.li`
@@ -24,8 +29,10 @@ export const ListItem = styled.li`
 `;
 
 export const ContainerImg = styled.div`
-  width: 100%;
   text-align: center;
 `;
 
-export const Img = styled.img``;
+export const Img = styled.img`
+  border-radius: 14px;
+  border: 1px solid ${colors.mainBlue};
+`;
