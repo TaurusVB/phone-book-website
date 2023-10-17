@@ -11,9 +11,10 @@ const InputBox = ({
   onChange = null,
   value,
   style,
+  styleForBox,
 }) => {
   return (
-    <Wrapper>
+    <Wrapper style={styleForBox}>
       {children}
       <CustomInput
         id={forAndId}

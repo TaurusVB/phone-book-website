@@ -77,6 +77,7 @@ const CustomForm = ({ type }) => {
             pattern="[a-zA-Z0-9]+"
             value={nickname}
             onChange={handleChange}
+            style={{ width: '300px' }}
           >
             <Person2SharpIcon sx={stylesForIcon} />
           </InputBox>

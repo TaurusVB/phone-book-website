@@ -26,6 +26,7 @@ export const Filter = () => {
       value={filter}
       onChange={handleFilterChange}
       style={{ margin: '0px', padding: '0 0 0 5px' }}
+      styleForBox={{ margin: '0 0 30px 0' }}
     >
       <ContentPasteSearchIcon sx={stylesForIcon} />
     </InputBox>
