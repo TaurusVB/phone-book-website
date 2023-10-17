@@ -1,31 +1,43 @@
 import styled from '@emotion/styled';
+import colors from 'utils/colorVaribals';
 
 export const ContactLiItem = styled.li`
-  width: 650px;
-  margin: 10px;
+  height: 105px;
   padding: 5px 15px;
-  border: 1px solid black;
-  border-radius: 4px;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: space-between;
+  border-radius: 5px;
+  background-color: inherit;
+  padding: 20px;
+  backdrop-filter: blur(15px);
+  border: 2px solid #5ea4ed;
 `;
 
 export const ContactText = styled.p`
-  font-size: 30px;
-  padding-right: 40px;
+  text-align: center;
+  font-size: 20px;
+  color: #fff;
 `;
 
 export const DeleteBtn = styled.button`
-  background-color: #04aa6d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 40px;
+  border-radius: 40px;
+  background: ${colors.mainBlue};
   border: none;
-  color: white;
-  padding: 16px 32px;
-  text-decoration: none;
-  margin: 4px 2px;
+  outline: none;
   cursor: pointer;
-  font-size: 25px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+  transition: all 0.3s;
+
   &:hover {
-    background-color: #c23f4d;
+    scale: 1.1;
   }
 `;

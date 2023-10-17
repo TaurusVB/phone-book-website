@@ -4,7 +4,7 @@ import { Filter } from 'components/Filter/Filter';
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { fetchContacts } from 'redux/contacts/operations';
-import { ContactsTitle, ContainerForm } from 'ui/ContactsPage.styled';
+import { Container, WrapperForContacts } from './ContactsPage.styled';
 
 const ContactsPage = () => {
   const dispatch = useDispatch();
@@ -16,12 +16,13 @@ const ContactsPage = () => {
   }, [dispatch]);
 
   return (
-    <ContainerForm>
+    <Container>
       <ContactForm />
-      <ContactsTitle>Contacts</ContactsTitle>
-      <Filter />
-      <Contacts />
-    </ContainerForm>
+      <WrapperForContacts>
+        <Filter />
+        <Contacts />
+      </WrapperForContacts>
+    </Container>
   );
 };
 

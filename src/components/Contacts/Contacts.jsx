@@ -1,4 +1,3 @@
-import { ContactsList } from './Contacts.styled';
 import { ContactItem } from 'components/ContactItem/ContactItem';
 import { useSelector } from 'react-redux';
 import {
@@ -9,6 +8,8 @@ import {
 } from 'redux/contacts/selectors';
 import Loader from 'components/Loader/Loader';
 import { ErrorMessage } from 'components/ErrorMessage/ErrorMessage';
+import { Grid } from '@mui/material';
+import Text from 'components/Text/Text';
 
 export const Contacts = () => {
   const contacts = useSelector(getContacts);
@@ -30,15 +31,15 @@ export const Contacts = () => {
       {!isLoading &&
         !Error &&
         (filteredСontacts.length !== 0 ? (
-          <ContactsList>
+          <Grid container spacing={2}>
             {filteredСontacts.map(contact => {
               return <ContactItem contact={contact} key={contact.id} />;
             })}
-          </ContactsList>
+          </Grid>
         ) : filterValue.length !== 0 ? (
-          <p>There is no name with the name {filterValue}</p>
+          <Text>There is no name with the name {filterValue}</Text>
         ) : (
-          <p>There are no contacts yet!</p>
+          <Text>There are no contacts yet!</Text>
         ))}
     </>
   );

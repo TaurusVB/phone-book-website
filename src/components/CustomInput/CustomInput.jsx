@@ -5,9 +5,10 @@ const CustomInput = ({
   id = null,
   name = null,
   pattern = null,
-  value = null,
-  onChange = null,
+  value = '',
+  onChange = () => {},
   title = null,
+  style,
 }) => {
   return (
     <Input
@@ -19,6 +20,7 @@ const CustomInput = ({
       value={value}
       onChange={onChange}
       title={title}
+      style={style}
     />
   );
 };
