@@ -32,8 +32,7 @@ registering, you can save your contacts and access them from anywhere. Login to
 your account to manage your contacts and ensure your data is safe and
 accessible.
 
-![Registration and Login](/assets/photoForReadme/login.png)![Registration and Login](/assets/photoForReadme/logup.png)
-
+<img src="/assets/photoForReadme/login.png" alt="Login" width="250"><img src="/assets/photoForReadme/logup.png" alt="logup" width="250">
 ---
 
 ### Contact List
@@ -53,7 +52,7 @@ Adding a new contact to your phonebook is quick and easy. In the "Add New
 Contact" section, you can enter the contact's name and phone number, and the
 contact will be added to your list.
 
-![Add New Contact](/assets/photoForReadme/AddContact.png)
+<img src="/assets/photoForReadme/AddContact.png" alt="Add New Contact" width="250">
 
 ---
 
@@ -63,6 +62,6 @@ In the "Delete Contacts" section, you can select and delete specific contacts
 from your list. This feature provides you with the ability to keep your
 phonebook organized and up to date.
 
-![Delete Contacts](/assets/photoForReadme/DeleteContact.png)
+<img src="/assets/photoForReadme/DeleteContact.png" alt="Delete Contacts" width="250">
 
 ---
